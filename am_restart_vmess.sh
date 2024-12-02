@@ -9,6 +9,9 @@ if [ $? -ne 0 ]; then
 	nohup /home/${USER}/.vmess/web run -c /home/${USER}/.vmess/config.json > /home/${USER}/.vmess/webtest.log 2>&1 &
 fi
 
+# 防止 bot 启动不了
+sleep 3
+
 # 接收用户传入的参数（端口、字符串或json格式内容）
 INPUT_PARAM=$1
 
